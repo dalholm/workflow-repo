@@ -1,3 +1,3 @@
 <template>
-  <h1>Hello frontend!</h1>
+  <h1>Hello frontend update!</h1>
 </template>
