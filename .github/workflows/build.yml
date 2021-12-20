@@ -27,12 +27,16 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
         cache-dependency-path: ./backend/package-lock.json
-    - name: build frontend
+    - name: build backend
       working-directory: ./backend
       run: |
         npm install
         npm run generate
-      
+    - name: build frontend
+      working-directory: ./frontend
+      run: |
+        npm install
+        npm run generate      
     - name: Commit changes
       uses: EndBug/add-and-commit@v7.5.0
       with:
