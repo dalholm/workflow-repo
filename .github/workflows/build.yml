@@ -68,11 +68,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - name: Commit changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: Mikael Dalholm
-          author_email: mikael@dalholm.se
-          message: 'Add build'
-          add: '*.js'
+      uses: EndBug/add-and-commit@v7.5.0
+      with:
+        author_name: Mikael Dalholm
+        author_email: mikael@dalholm.se
+        message: 'Add build'
   
   
